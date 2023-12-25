@@ -1,0 +1,34 @@
+spring:
+  jpa:
+    show-sql: true
+
+  datasource:
+    password: Rgukt@483
+    username: root
+    url: jdbc:mysql://localhost:3306/poolcarz_fare
+  application:
+    name: FareMS
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+  endpoint:
+    shutdown:
+      enabled: true
+
+
+logging:
+  pattern:
+    file: "%-30(%d{HH:mm:ss.SSS} [%thread]) %-5level----%X{RequestId}---- %msg%n"
+    console: "%-30(%d{HH:mm:ss.SSS} [%thread]) %-5level----%X{RequestId}---- %msg%n"
+
+  level:
+    root: info
+
+server:
+  port: 8383
+

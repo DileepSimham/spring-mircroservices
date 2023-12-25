@@ -1,0 +1,28 @@
+#logging:
+#  .pattern:
+#  file: '%-30(%d{HH:mm:ss.SSS} [%thread]) %-5level----%x{RequestId}---- %msg%n'
+#  console:
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      RideServiceCB:
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 20s
+        failureRateThreshold: '50'
+
+
+spring:
+  jpa:
+    show-sql: true
+
+  datasource:
+    password: Rgukt@483
+    username: root
+    url: jdbc:mysql://localhost:3306/poolcarz_ride
+
+  application:
+    name: RideMS
+server:
+  port: 2222
+

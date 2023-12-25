@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="mobileService1" class="com.infosys.poolcarz.fare.dileep.MobileService" />
+
+<!-- 	<bean id="mobileService2" class="com.infosys.poolcarz.fare.dileep.MobileService">
+		<constructor-arg value="1234567891" name="mobileNumber"/>
+		<constructor-arg value="Nokia" name="model" />
+	</bean>
+ -->
+
+	<bean id="mobileService3" class="com.infosys.poolcarz.fare.dileep.MobileService">
+		<property name="mobileNumber" value="1234642323" />
+		<property name="model" value="Nokia" />
+	</bean>
+</beans>
